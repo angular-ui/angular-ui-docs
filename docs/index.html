@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+	<title>AngularUI for AngularJS</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+	<script src="js/docs.js"></script>
+
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" >
+	<link rel="stylesheet" href="css/docs.css" >
+</head>
+<body data-spy="scroll">
+	<header class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="dropdown pull-left">
+					<a class="brand dropdown-toggle" role="button" data-toggle="dropdown" href="#"> 
+						AngularUI
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="https://github.com/angular-ui/"><strong>Related Projects:</strong></a></li>
+						<li class="divider"></li>
+						<li><a href="http://angular-ui.github.com/bootstrap/">Bootstrap</a></li>
+						<li><a href="http://angular-ui.github.com/ng-grid/">Grid</a></li>
+						<li><a href="https://github.com/angular-ui/AngularJs.tmbundle">AngularJS.tmbundle</a></li>
+						<li><a href="http://angular-ui.github.com/ui-router/">Router <span class="label label-success">New!</span></a></li>
+						<li><a href="http://angular-ui.github.com/Tips-n-Tricks/">Tips-n-Tricks <span class="label">WIP</span></a></li>
+					</ul>
+				</div>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active">
+							<a scrollto href="#top">Home</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+								Directives
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a scrollto href="#directives-jq">jQuery Passthrough</a></li>
+								<li><a scrollto href="#directives-codemirror">CodeMirror IDE</a></li>
+								<li><a scrollto href="#directives-event">Event Binder</a></li>
+								<li><a scrollto href="#directives-calendar">Calendar</a></li>
+								<li><a scrollto href="#directives-map">Google Maps</a></li>
+								<li><a scrollto href="#directives-date">Date</a></li>
+								<li><a scrollto href="#directives-keypress">Keypress</a></li>
+								<li><a scrollto href="#directives-mask">Mask</a></li>
+								<li><a scrollto href="#directives-if">If</a></li>
+								<li><a scrollto href="#directives-validate">Validate</a></li>
+								<li><a scrollto href="#directives-reset">Reset</a></li>
+								<li><a scrollto href="#directives-animate">Animate</a></li>
+								<li><a scrollto href="#directives-scrollfix">Scrollfix</a></li>
+								<li><a scrollto href="#directives-select2">Select2</a></li>
+								<li><a scrollto href="#directives-showhide">Show / Hide / Toggle</a></li>
+								<li><a scrollto href="#directives-tinymce">TinyMCE</a></li>
+                                <li><a scrollto href="#directives-sortable">Sortable</a></li>
+								<li><a scrollto href="#directives-currency">Currency</a></li>
+								<li><a scrollto href="#directives-routing">Route Matching</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								Filters
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a scrollto href="#filters-highlight">Highlight</a></li>
+								<li><a scrollto href="#filters-inflector">Inflector</a></li>
+								<li><a scrollto href="#filters-unique">Unique</a></li>
+								<li><a scrollto href="#filters-format">Format</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="pull-right nav">
+						<li><a href="https://github.com/angular-ui/angular-ui/graphs/contributors">Contributors</a></li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								Need Help?
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="https://github.com/angular-ui/angular-ui/issues?sort=updated&state=open">AngularUI broken or want a new feature?</a></li>
+								<li><a href="https://github.com/angular-ui/angular-ui.github.com/issues?sort=updated&state=open">Demo page broken or missing demos?</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div role="main">
+
+		<header class="hero-unit" id="overview">
+			<div class="container">
+				<h1>
+					AngularUI
+				</h1>
+				<p>The companion suite to the <strong><a href="http://angularjs.org">AngularJS</a></strong> framework.</p>
+				<p class="btn-group">
+					<a class="btn btn-large" href="https://github.com/angular-ui/angular-ui"><i class="icon-github"></i> Code on Github</a><a class="btn btn-large btn-primary" href="https://github.com/angular-ui/angular-ui/tags"><i class="icon-download-alt icon-white"></i> Download</a><a class="btn btn-large" ng-click="showBuildModal()">Create a Build</a>
+				</p>
+			</div>
+			<div class="bs-docs-social">
+				<div class="container">
+					<ul class="bs-docs-social-buttons">
+						<li>
+							<iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&repo=angular-ui&type=watch&count=true"
+	  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+						</li>
+						<li>
+							<iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&repo=angular-ui&type=fork&count=true"
+	  allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+						</li>
+						<li>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="angularjs">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</li>
+						<li>
+							<!-- Place this tag where you want the +1 button to render. -->
+							<div class="g-plusone" data-size="medium"></div>
+
+							<!-- Place this tag after the last +1 button tag. -->
+							<script type="text/javascript">
+							  (function() {
+							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							    po.src = 'https://apis.google.com/js/plusone.js';
+							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();
+							</script>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+
+			<h3 class="alert alert-info pagination-centered">
+				Check out the new 
+				<span class="btn-group">
+					<a href="http://angular-ui.github.com/bootstrap" class="btn btn-primary btn-large">Bootstrap Project</a><!-- <a href="http://angular-ui.github.com/ng-grid" class="btn btn-primary btn-large">Grid</a> -->
+				</span>
+				 by the AngularUI Team!
+			</h3>
+			
+			<section id="setup">
+				<h1>Getting Started</h1>
+				<p>Setup is easy and designed to be highly modular. Just follow these steps <strong>in order</strong>:</p>
+				<ol>
+					<li><span class="label label-info">Optional</span> Include the <a href="#ieshiv">Internet Explorer Shiv</a> (<a href="http://docs.angularjs.org/guide/ie">read why here</a>)</li>
+					<li><span class="label label-info">Optional</span> Include jQuery if using jQuery Plugins</li>
+					<li><span class="label label-info">Optional</span> Include any jQuery(UI) plugins you wish to use (<strong>plugins are not bundled with AngularUI</strong>)</li>
+					<li>Include AngularJS</li>
+					<li>Include AngularUI in one of the following ways:
+						<ul>
+							<li>Include the entire library (located in <code>/build</code> directory)</li>
+							<li>Include the <code>/common/module.js</code> and any directives or filters you wish to use</li>
+							<li><a ng-click="showBuildModal()">Create a custom build</a> and include it</li>
+						</ul>
+					</li>
+					<li>Add the <code>'ui'</code> module as a dependency:
+						<pre class="prettyprint">angular.module('myModule', ['ui'])</pre>
+					</li>
+					<li><span class="label label-info">Optional</span> Setup your <a href="#defaults">Global Defaults</a> for plugins and directives</li>
+				</ol>
+			</section>
+			
+			<section id="defaults">
+				<h1>Global Defaults</h1>
+				<div class="row">
+					<div class="span6">
+						<p>You can specify default options for most AngularUI directives. This way you don't have to pass them every single time you call the directive. Passed options will be merged onto defaults, overriding any pre-existing keys.</p>
+						<p>Simply declare the global config on your module: <code>module.value('ui.config', {})</code>. Each directive should be namespaced by the directive name (without the <code>ui-</code> prefix).</p>
+					</div>
+					<div class="span6">
+						<p>Here's an example to make <a href="#directives-select2">ui-select2</a> clearable by default:</p>
+<pre class="prettyprint linenums" ng-non-bindable>
+var myModule = angular.module('myModule', ['ui']);
+myModule.value('ui.config', {
+   select2: {
+      allowClear: true
+   }
+});
+</pre>
+					</div>
+				</div>
+			</section>
+
+			<ng-include ng-repeat="module in modules" src=" 'https://github.com/' + module.repo + '/raw/master/docs/index.html' "></ng-include>
+
+		</div>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17352735-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div class="modal-backdrop fade" ng-class="{in:buildModalShown}"></div>
+<div class="modal fade" ng-class="{in:buildModalShown}">
+  <div class="modal-header"><h2>Create a Custom Build</h2></div>
+  <div class="modal-body">
+    <div ng-show="buildErrorText">
+      <h3 style="text-align: center;">{{buildErrorText}}</h3>
+    </div>
+    <div ng-hide="buildErrorText">
+      <h3 style="text-align: center;">Select the modules you wish to download:</h3>
+      <select style="width: 100%;" ui-select2 multiple 
+        ui-options="{multiple: true}"
+        ng-model="selectedModules">
+        <option ng-repeat="m in modules" value="{{m}}">{{m | inflector:'humanize'}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+  	<a class="btn pull-left" ng-click="selectedModules=['event','if','jq','keypress','showhide','validate']">Recommended Modules</a>
+    <a class="btn btn-primary" ng-disabled="!selectedModules.length" ng-click="selectedModules.length && downloadBuild()"><i class="icon-download-alt icon-white"></i> Download {{selectedModules.length}} Modules</a>
+    <a class="btn" ng-click="buildModalShown = false">Cancel</a>
+  </div>
+</div>
+</body>
+</html>

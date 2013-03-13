@@ -1,0 +1,8 @@
+[
+	{
+		"name" : "ui-select2",
+		"repo" : "angular-ui/ui-select2",
+		"module" : "ui.select2",
+		"keywords" : [ "ui" ]
+	}
+]
