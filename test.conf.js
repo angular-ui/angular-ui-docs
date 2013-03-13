@@ -6,8 +6,8 @@ files = [
   'components/jquery/jquery.js',
   'components/angular/angular.js',
   'components/*/*.js',
-  'src/*.js',
-  'test/*Spec.js'
+  '*.js',
+  'test/*.js'
 ];
 
 // Avoid including minified version of angular and other libs again
