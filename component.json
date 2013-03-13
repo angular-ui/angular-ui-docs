@@ -10,5 +10,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/angular-ui/angular-module.git"
+  },
+  "dependencies": {
+    "angular-mocks": "latest"
   }
 }
