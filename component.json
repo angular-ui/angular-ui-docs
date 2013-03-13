@@ -1,0 +1,14 @@
+{
+  "author": "AngularUI",
+  "name": "angular-module",
+  "version": "0.0.1",
+  "homepage": "http://angular-ui.github.com",
+  "keywords": [
+    "angular",
+    "angularui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular-ui/angular-module.git"
+  }
+}
