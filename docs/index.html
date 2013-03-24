@@ -206,27 +206,5 @@ myModule.value('ui.config', {
   })();
 
 </script>
-<div class="modal-backdrop fade" ng-class="{in:buildModalShown}"></div>
-<div class="modal fade" ng-class="{in:buildModalShown}">
-  <div class="modal-header"><h2>Create a Custom Build</h2></div>
-  <div class="modal-body">
-    <div ng-show="buildErrorText">
-      <h3 style="text-align: center;">{{buildErrorText}}</h3>
-    </div>
-    <div ng-hide="buildErrorText">
-      <h3 style="text-align: center;">Select the modules you wish to download:</h3>
-      <select style="width: 100%;" ui-select2 multiple 
-        ui-options="{multiple: true}"
-        ng-model="selectedModules">
-        <option ng-repeat="m in modules" value="{{m}}">{{m | inflector:'humanize'}}</option>
-      </select>
-    </div>
-  </div>
-  <div class="modal-footer">
-  	<a class="btn pull-left" ng-click="selectedModules=['event','if','jq','keypress','showhide','validate']">Recommended Modules</a>
-    <a class="btn btn-primary" ng-disabled="!selectedModules.length" ng-click="selectedModules.length && downloadBuild()"><i class="icon-download-alt icon-white"></i> Download {{selectedModules.length}} Modules</a>
-    <a class="btn" ng-click="buildModalShown = false">Cancel</a>
-  </div>
-</div>
 </body>
 </html>
