@@ -13,15 +13,14 @@
         'angular': _ + 'angular.min'
       },
       shim: {
-        'build/angular-ui-utils': { deps: ['angular'] },
         'core/prettifyDirective': { deps: ['prettyPrint', 'angular'] },
         'twitter-bootstrap': { deps: ['jquery'] }
       }
     },
-    ['twitter-bootstrap', 'core/prettifyDirective', 'build/angular-ui-utils'],
+    ['twitter-bootstrap', 'core/prettifyDirective'],
     function () {
 
-      angular.module('x', ['prettifyDirective', 'ui.utils'])
+      angular.module('x', ['prettifyDirective'])
         .controller('MainCtrl', [
           '$scope', function ($scope) {
 
