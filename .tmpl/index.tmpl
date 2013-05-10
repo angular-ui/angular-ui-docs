@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=utf-8/>
-    <title>Angular UI ~ <%= pkg.name %> Doc</title>
+    <title>Angular UI ~ <%= meta.view.humaName %> Doc</title>
 
     <!-- Le css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="dropdown pull-left">
                 <a class="brand dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-                    <%= pkg.name %>
+                    <%= meta.view.humaName %>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -57,13 +57,13 @@
 <header class="hero-unit" id="overview">
     <div class="container">
 
-        <h1><%= pkg.name %></h1>
+        <h1><%= meta.view.humaName %></h1>
 
         <p><%= pkg.description %></p>
 
         <p class="btn-group">
-            <a class="btn" href="https://github.com/angular-ui/<%= pkg.repoName %>"><i class="icon-github"></i> Code on Github</a>
-            <a class="btn btn-primary" href="https://github.com/angular-ui/<%= pkg.repoName %>/tree/gh-pages/build">
+            <a class="btn" href="https://github.com/angular-ui/<%= meta.view.repoName %>"><i class="icon-github"></i> Code on Github</a>
+            <a class="btn btn-primary" href="https://github.com/angular-ui/<%= meta.view.repoName %>/tree/gh-pages/build">
                 <i class="icon-download-alt icon-white"></i> Download <small>(<%= pkg.version %>)</small>
             </a>
         </p>
@@ -72,10 +72,10 @@
         <div class="container">
             <ul class="bs-docs-social-buttons">
                 <li>
-                    <iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=<%= pkg.repoName %>&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=<%= meta.view.repoName %>&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
                 </li>
                 <li>
-                    <iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=<%= pkg.repoName %>&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=<%= meta.view.repoName %>&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
                 </li>
                 <li>
                     <!-- Place this tag where you want the +1 button to render. -->
