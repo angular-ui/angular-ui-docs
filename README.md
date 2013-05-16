@@ -12,7 +12,7 @@ git submodule add git://github.com/angular-ui/angular-ui-docs.git out
 ```
 
 **It's working with ssh deploy key !**
-You can find a quick tuto [here](https://gist.github.com/angular-ui/5525750#file-travis-secure-key-sh).
+You can find a quick tuto [here](https://gist.github.com/douglasduteil/5525750#file-travis-secure-key-sh).
 
 After you added your deploy key to GitHub and Travis (in  `.travis.yml`).  Add a global value with your repo name, like : 
 
