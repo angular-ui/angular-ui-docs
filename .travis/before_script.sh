@@ -19,4 +19,7 @@ mv -fv out/.travis/ssh-config ~/.ssh/config
 
 echo -e ">>> Hi github.com !"
 ssh -T git@github.com
+
+if [ $? -eq 255 ]; then echo '>>> Authentication Fail !'; exit 3; fi
+
 echo -e "\n"
