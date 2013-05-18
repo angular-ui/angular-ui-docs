@@ -35,7 +35,8 @@
       shim: {
         'core/prettifyDirective': { deps: ['prettyPrint', 'angular'] },
         'twitter-bootstrap': { deps: ['jquery'] }
-      }
+      },
+      waitSeconds: 15
     },
     ['twitter-bootstrap', 'core/prettifyDirective'],
     function () {
