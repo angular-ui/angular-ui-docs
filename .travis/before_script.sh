@@ -15,7 +15,7 @@ base64 --decode --ignore-garbage ~/.ssh/travis_rsa_64 > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 
 echo -e ">>> Copy config"
-mv -fv out/.travis/ssh-config ~/.ssh/config
+mv -fv components/angular-ui-docs/.travis/ssh-config ~/.ssh/config
 
 echo -e ">>> Hi github.com !"
 ssh -T git@github.com

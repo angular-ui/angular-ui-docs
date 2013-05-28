@@ -7,7 +7,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   echo -e ">>> Grunt the doc.\n"
   grunt build-doc
-  cp -R out $HOME/out
+  cp -R components/angular-ui-docs $HOME/out
 
 
   echo -e ">>> Clone the gh-pages branch.\n"
