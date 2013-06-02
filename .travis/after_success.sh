@@ -1,6 +1,6 @@
 # Inspired by http://sleepycoders.blogspot.se/2013/03/sharing-travis-ci-generated-files.html
 
-[  "$TRAVIS_PULL_REQUEST" == "true" ] || [  "$TRAVIS_BRANCH" != "master" ] && echo -e "\n" && exit 0
+[  "$TRAVIS_PULL_REQUEST" != "false" ] || [  "$TRAVIS_BRANCH" != "master" ] && echo -e "\n" && exit 0
 
 echo -e "\n>>> Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH\n"
 
