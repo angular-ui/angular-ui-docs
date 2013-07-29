@@ -45,10 +45,18 @@ First you need to generate the `index.html` using [grunt-contrib-copy](https://g
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {
-        view : {
-            humaName : "UI <repo>",
-            repoName : "<the github repo name>"
-          }
+      view : {
+        humaName : "UI <repo>",
+        repoName : "<the github repo name>",
+        demoHTML : grunt.file.read("demo/demo.html"),
+        demoJS   : grunt.file.read("demo/demo.js"),
+        css : [
+          '<any required css files>'
+        ],
+        js : [
+          '<any required script files>'
+        ]
+      }
     },
     copy: {
       template : {
@@ -66,23 +74,4 @@ This will generate `index.html` using :
  - the description in the `package.json`,
  - the `meta.view.humaName` as title of the demo site,
  - the `meta.view.repoName` in the github links,
-
-Then, like `index.html` automatically include a `demo.html` file, you will have to copy yours.
-
-```Javascript
-  grunt.initConfig({
-    copy: {
-        main: {
-        files: [
-          {src: ['demo/demo.html'], dest: 'out/demos.html', filter: 'isFile'}
-          ]
-      }
-    }
-});
-```
-
-In this file you can use RequireJS, AngularJS and jQuery.
-I added a `requireCSS` as a HACK  'cause  it's home made...
-
-In bonus, the id of each section tag in the page are drawn into a _Module_ menu at the top right of the page.
 
