@@ -5,10 +5,16 @@ This generator use Grunt, AngularJS, RequireJS and jQuery.
 
 ## How to add it !
 
-Add it as a submodule of your module.
+Add it as a bower component.
 
 ```sh
-git submodule add git://github.com/angular-ui/angular-ui-docs.git out
+bower install git://github.com/angular-ui/angular-ui-docs.git
+```
+or add to your `bower.json`
+```Javascript
+  "devDependencies": {
+    "angular-ui-docs": "angular-ui/angular-ui-docs"
+  }
 ```
 
 **It's working with ssh deploy key !**
@@ -25,7 +31,7 @@ env:
 
 Then add the scripts and limit the build-able branches.
 
-```
+```yaml
 before_script: out/.travis/before_script.sh
 after_success: out/.travis/after_success.sh
 branches:
@@ -75,3 +81,23 @@ This will generate `index.html` using :
  - the `meta.view.humaName` as title of the demo site,
  - the `meta.view.repoName` in the github links,
 
+
+## See it working locally !
+Actually the demo must be built !
+We are using _bower_ and  _grunt_ for this.
+
+First in you UI project run
+```sh
+npm install && bower install
+grunt build-doc
+```
+
+Then run a localhost on `bower_components/angular-ui-docs`
+```sh
+cd bower_components/angular-ui-docs
+python -m SimpleHTTPServer
+or
+php -S localhost:8000
+```
+
+and you'll have the generated website on http://localhost:8000/
