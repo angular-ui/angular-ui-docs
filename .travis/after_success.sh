@@ -7,7 +7,7 @@ echo -e "\n>>> Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH\n"
 
 echo -e ">>> Grunt the doc.\n"
 grunt build-doc
-cp -R components/angular-ui-docs $HOME/out
+cp -R bower_components/angular-ui-docs $HOME/out
 
 
 echo -e ">>> Clone the gh-pages branch.\n"
