@@ -31,7 +31,7 @@ angular.module('plunker', [])
         return r;
       };
 
-      var indexContent = function (content) {
+      var indexContent = function () {
         return '<!DOCTYPE html>\n' +
           '<html ng-app="x">\n\n' +
           '  <head>\n' +
@@ -55,7 +55,7 @@ angular.module('plunker', [])
 
           '      <script src="http://angular-ui.github.io/' + repoName + '/build/' + repoName + '.js"></script>\n' +
 
-          ( angular.isDefined(content.javascript) ?  '    <script src="app.js"></script>\n' : '') +
+          '    <script src="app.js"></script>\n' +
           '  </body>\n' +
           '</html>\n';
       };
@@ -64,12 +64,12 @@ angular.module('plunker', [])
         return "var app = angular.module('x', ['" + moduleName.toLowerCase() + "']);" + "\n\n\n" + content;
       };
 
+
+
       addField('description', 'http://angular-ui.github.io/' + repoName);
       addField('files[index.html]', indexContent(content));
+      addField('files[app.js]', scriptContent(content.javascript || ""));
 
-      if (content.javascript){
-        addField('files[app.js]', scriptContent(content.javascript));
-      }
       if (content.css){
         addField('files[style.css]', content.css);
       }
