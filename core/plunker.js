@@ -98,7 +98,8 @@ angular.module('plunker', [])
       link:function (scope, element, attrs) {
         var htmlContent = "";
         angular.forEach(element.find('li'), function(e){
-          htmlContent += angular.element(e).text() +"\n";
+          t = angular.element(e).text();
+          htmlContent += (t.trim() === '') ? "\n" : t +"\n";
         });
         scope.content[attrs.plunkerContent] = htmlContent;
       }
